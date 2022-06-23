@@ -46,7 +46,7 @@
 
 				if (result.status.name == "ok") {
 
-					
+					$('#showdata').html(result.data['sunrise']);
 
 				}
 			
