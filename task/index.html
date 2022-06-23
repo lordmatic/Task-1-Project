@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>AJAX/PHP/CURL/JSON example</title>
+		<meta name="description" content="AJAX/PHP/CURL/JSON example">
+		<meta name="author" content="Paddy Evans">
+		<link
+		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+		rel="stylesheet"> 
+
+	<link rel="stylesheet" href="libs/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		
+
+		<select id="selCountry">
+			<option value="GB">Great Britain</option>
+			<option value="FR">France</option>
+			<option value="DE">Germany</option>
+			<option value="US">USA</option>
+		</select>
+
+		<select id="selLanguage">
+			<option value="en">English</option>
+			<option value="fr">Francais</option>
+			<option value="de">Deutsche</option>
+		</select>
+
+		<button id="btnRun">Run</button>
+
+		<br><br>
+		<!--Timezone api-->
+		<input type="number" id="lat" />
+		<input type="number" id="lng" />
+		<button id="btnRun1">Run</button>
+
+		<div id="showdata"></div>
+
+		<br/><br/>
+
+		<!--Countrycode api-->
+		<input type="number" id="lat1" />
+		<input type="number" id="lng1" />
+		<button id="btnRun2">Run</button>
+		
+       <br> <br>
+       <!--Countrycode api-->
+	   <input type="number" id="lat3" />
+	   <input type="number" id="lag3" />
+	   <button id="btnRun3">Run</button>
+
+
+		<div id="divResults">
+			
+			<table>
+
+				<tr>
+					<td align="right">
+						Continent: 
+					</td>
+					<td id="txtContinent">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Capital: 
+					</td>
+					<td id="txtCapital">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Languages: 
+					</td>
+					<td id="txtLanguages">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Population: 
+					</td>
+					<td id="txtPopulation">
+						
+					</td>
+
+				</tr>
+
+				<tr>
+					<td align="right">
+						Area (km<sup>2</sup>): 
+					</td>
+					<td id="txtArea">
+						
+					</td>
+
+				</tr>
+
+
+			</table>
+
+        <hr>
+		<hr>
+
+		<table class="table table-hover">
+				<thead>
+				  <tr>
+					<th scope="col">API names</th>
+					<th scope="col">description</th>
+					<th scope="col"></th>
+					
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<th scope="row">Weather</th>
+					<td>Weather Stations with most recent Weather Observation</td>
+					<td><input type="submit"></td>
+				
+				  </tr>
+				  <tr>
+					<th scope="row">Earthquakes</th>
+					<td>	Recent Earthquakes</td>
+					<td><input type="submit"></td>
+					
+				  </tr>
+				 
+				  <tr>
+					<th scope="row">Country Info </th>
+					<td>Country Info (Bounding Box, Capital, Area in square km, Population)</td>
+					<td><input type="submit"></td>
+					
+					
+				  </tr>
+				  <tr>
+					<th scope="text-area"></th>
+				
+					<td><textarea name="message" rows="5" cols="100%" value ="results"></textarea></td>
+					
+				  </tr>	
+			</tbody>
+	
+		 </table>		  	
+		
+		</div>
+
+		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
+		<script type="application/javascript" src="libs/js/script.js"></script>
+    
+		 <script src="libs/js/bootstrap.bundle.min.js"></script>
+	</body>
+
+</html>
