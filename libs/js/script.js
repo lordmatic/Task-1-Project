@@ -62,7 +62,7 @@
 	$('#btnRun2').click(function() {
 
 		$.ajax({
-			url: "libs/php/getCountryInfo.php",
+			url: "libs/php/getStreetNameLookup.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
@@ -91,7 +91,7 @@
 	$('#btnRun3').click(function() {
 
 		$.ajax({
-			url: "libs/php/getCountryInfo.php",
+			url: "libs/php/getStreetNameLookup.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
