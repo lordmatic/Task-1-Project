@@ -7,7 +7,7 @@
 
 	$executionStartTime = microtime(true);
 
-	$url='http://api.geonames.org/streetNameLookupJSON?formatted=true&q='.$_REQUEST['address'].'&country='.$_REQUEST['countryCode'].'&username=libertjose&style=full';
+	$url='http://api.geonames.org/countryCodeJSON?formatted=true&lat='.$_REQUEST['lat'].'&lng='.$_REQUEST['lng'].'&username=libertjose&style=full';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);

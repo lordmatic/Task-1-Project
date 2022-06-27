@@ -66,8 +66,8 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: $('#selCountry').val(),
-				lang: $('#selLanguage').val()
+				lat: $('#lat1').val(),
+				lng: $('#lng1').val()
 			},
 			success: function(result) {
 
@@ -75,7 +75,7 @@
 
 				if (result.status.name == "ok") {
 
-					
+					$('#showdata1').html(result.data['countryCode']);
 
 				}
 			
