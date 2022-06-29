@@ -8,7 +8,7 @@
 
 		<title>AJAX/PHP/CURL/JSON example</title>
 		<meta name="description" content="AJAX/PHP/CURL/JSON example">
-		<meta name="author" content="Paddy Evans">
+		<meta name="author" content="Liberty Joseph">
 		<link
 		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
 		rel="stylesheet"> 
@@ -24,6 +24,7 @@
 			<option value="FR">France</option>
 			<option value="DE">Germany</option>
 			<option value="US">USA</option>
+			<option value="US">NETHERLAND</option>
 		</select>
 
 		<select id="selLanguage">
@@ -44,7 +45,7 @@
 
 		<br/><br/>
 
-		<!--Countrycode api-->
+		<!--GetStreetNameInfo api-->
 		<input type="number" id="lat1" />
 		<input type="number" id="lng1" />
 		<button id="btnRun2">Run</button>
@@ -52,16 +53,26 @@
 		<div id="showdata1"></div>
 		
        <br> <br>
-       <!--Countrycode api-->
-	   <input type="number" id="lat3" />
-	   <input type="number" id="lag3" />
+       <!--NearByWeather api -->
+	   <input type="number" id="lat2" />
+	   <input type="number" id="lng2" />
 	   <button id="btnRun3">Run</button>
 
-
-		<div id="divResults">
-			
+		<div id="showdata3"> 
+		
+  
+		<br> <br>
+		
+		<!--NearByWeather api -->
+		<input type="number" id="lat4" />
+		<input type="number" id="lng4" />
+		<button id="btnRun4">Run</button>
+   
+		<div id="showdata4"> 
+		   
+	 
+		   <br> <br>
 			<table>
-
 				<tr>
 					<td align="right">
 						Continent: 
@@ -107,7 +118,7 @@
 						Area (km<sup>2</sup>): 
 					</td>
 					<td id="txtArea">
-						
+
 					</td>
 
 				</tr>
@@ -115,8 +126,7 @@
 
 			</table>
 
-        <hr>
-		<hr>
+			<br>  
 
 		<table class="table table-hover">
 				<thead>
@@ -154,11 +164,11 @@
 					<td><textarea name="message" rows="5" cols="100%" value ="results"></textarea></td>
 					
 				  </tr>	
-			</tbody>
+			</tbody>  
 	
-		 </table>		  	
+		 </table>	  	 	
 		
-		</div>
+		</div> 
 
 		<script type="application/javascript" src="libs/js/jquery-2.2.3.min.js"></script>
 		<script type="application/javascript" src="libs/js/script.js"></script>

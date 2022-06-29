@@ -88,15 +88,16 @@
 	
 	});
 
+
 	$('#btnRun3').click(function() {
 
 		$.ajax({
-			url: "libs/php/getStreetNameLookup.php",
+			url: "libs/php/getNearByWeather.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: $('#selCountry').val(),
-				lang: $('#selLanguage').val()
+				lat: $('#lat2').val(),
+				lng: $('#lng2').val()
 			},
 			success: function(result) {
 
@@ -104,7 +105,36 @@
 
 				if (result.status.name == "ok") {
 
-					
+					$('#showdata3').html(result.data['elevation']);
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				// your error code
+				console.log(jqXHR);
+			}
+		}); 
+	
+	});
+
+	$('#btnRun4').click(function() {
+
+		$.ajax({
+			url: "libs/php/getStreetNameLookup.php",
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				lat: $('#lat4').val(),
+				lng: $('#lng4').val()
+			},
+			success: function(result) {
+
+				console.log(JSON.stringify(result));
+
+				if (result.status.name == "ok") {
+
+					$('#showdata4').html(result.data['adminName1']);
 
 				}
 			
