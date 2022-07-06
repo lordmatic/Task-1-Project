@@ -37,8 +37,8 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				lat: $('#lat').val(),
-				lng: $('#lng').val()
+				lat1: $('#lat').val(),
+				lng1: $('#lng').val()
 			},
 			success: function(result) {
 
@@ -59,74 +59,15 @@
 	
 	});
 
-	$('#btnRun2').click(function() {
-
-		$.ajax({
-			url: "libs/php/getStreetNameLookup.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				lat: $('#lat1').val(),
-				lng: $('#lng1').val()
-			},
-			success: function(result) {
-
-				console.log(JSON.stringify(result));
-
-				if (result.status.name == "ok") {
-
-					$('#showdata1').html(result.data['countryCode']);
-
-				}
-			
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				// your error code
-				console.log(jqXHR);
-			}
-		}); 
-	
-	});
-
-
-	$('#btnRun3').click(function() {
-
-		$.ajax({
-			url: "libs/php/getNearByWeather.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				lat: $('#lat2').val(),
-				lng: $('#lng2').val()
-			},
-			success: function(result) {
-
-				console.log(JSON.stringify(result));
-
-				if (result.status.name == "ok") {
-
-					$('#showdata3').html(result.data['elevation']);
-
-				}
-			
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				// your error code
-				console.log(jqXHR);
-			}
-		}); 
-	
-	});
-
 	$('#btnRun4').click(function() {
 
 		$.ajax({
-			url: "libs/php/getStreetNameLookup.php",
+			url: "libs/php/getNeighbourhood.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				lat: $('#lat4').val(),
-				lng: $('#lng4').val()
+				lat1: $('#lat').val(),
+				lng1: $('#lng').val()
 			},
 			success: function(result) {
 
@@ -134,7 +75,7 @@
 
 				if (result.status.name == "ok") {
 
-					$('#showdata4').html(result.data['adminName1']);
+					$('#showdata1').html(result.data['neighbourhood']['adminName2']);
 
 				}
 			
@@ -146,3 +87,37 @@
 		}); 
 	
 	});
+
+ 	
+  	$('#btnRun2').click(function() {
+
+		$.ajax({
+			url: "libs/php/getChildren.php",
+			type: 'POST',
+			dataType: 'json',
+     		data: {
+				lat2: $('#lat').val(),
+				lng2: $('#lng').val()
+			},
+			success: function(result) {
+
+				console.log(JSON.stringify(result));
+
+				if (result.status.name == "ok") {
+
+					$('#showdata2').html(result.data['totalResultsCount']);
+
+				}
+			
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				// your error code
+				console.log(jqXHR);
+			}
+		}); 
+	
+	});   
+	
+
+	
+  

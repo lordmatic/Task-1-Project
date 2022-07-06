@@ -7,7 +7,8 @@
 
 	$executionStartTime = microtime(true);
 
-	$url='http://api.geonames.org/timezoneJSON?formatted=true&lat='.$_REQUEST['lat1'].'&lng='.$_REQUEST['lng1'].'&username=libertjose&style=full';
+    $url='http://api.geonames.org/childrenJSON?formatted=true&geonameId='.$_REQUEST['geonameId'].'&username=libertjose&style=full';
+
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -24,7 +25,7 @@
 	$output['status']['name'] = "ok";
 	$output['status']['description'] = "success";
 	$output['status']['returnedIn'] = intval((microtime(true) - $executionStartTime) * 1000) . " ms";
-	$output['data'] = $decode;
+	$output['data'] = $decode['geonames'];
 	
 	header('Content-Type: application/json; charset=UTF-8');
 
