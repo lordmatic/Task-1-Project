@@ -59,7 +59,7 @@
 	
 	});
 
-	$('#btnRun4').click(function() {
+	$('#btnRun2').click(function() {
 
 		$.ajax({
 			url: "libs/php/getNeighbourhood.php",
@@ -89,19 +89,22 @@
 	});
 
  	
-  	$('#btnRun2').click(function() {
+  	$('#btnRun3').click(function() {
 
 		$.ajax({
 			url: "libs/php/getChildren.php",
 			type: 'POST',
 			dataType: 'json',
      		data: {
-				lat2: $('#lat').val(),
-				lng2: $('#lng').val()
+				geonameId: $('#geoid').val(),
+				geonameId: $('#geoid').val(),
 			},
 			success: function(result) {
 
-				console.log(JSON.stringify(result));
+				console.log(JSON.stringify(result.data[0].asciiName));
+				console.log(JSON.stringify(result.data[1].asciiName));
+				console.log(JSON.stringify(result.data[2].asciiName));
+				console.log(JSON.stringify(result.data[3].asciiName));
 
 				if (result.status.name == "ok") {
 

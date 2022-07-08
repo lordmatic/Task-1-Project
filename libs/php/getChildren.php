@@ -8,8 +8,7 @@
 	$executionStartTime = microtime(true);
 
     $url='http://api.geonames.org/childrenJSON?formatted=true&geonameId='.$_REQUEST['geonameId'].'&username=libertjose&style=full';
-
-
+	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
